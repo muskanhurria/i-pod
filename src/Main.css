@@ -1,0 +1,124 @@
+.outer{
+    background-color: lightgray;
+    height: 600px;
+    width: 350px;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    border-radius: 1.8rem;
+}
+
+.screen{
+    background-color: white;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    border-radius: 1.2rem;
+    position: relative;
+    top: 3%;
+    left: 7%;
+}
+
+#background{
+    border-radius: 1.1rem;
+}
+
+.screen-options{
+    background-color: white;
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+}
+
+.ipod{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.screen-btn{
+    height: 50px;
+    width: 180px;
+    background-color: transparent;
+    display: block;
+    font-size: 30px;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+    font-weight: bold;
+}
+
+#music{
+    top: 40%;
+    left: 3%;
+}
+
+#games{
+    top: 60%;
+    left: 3%;
+}
+
+#settings{
+    left: 3%;
+    top: 80%;
+}
+
+.options{
+    background-color: white;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 105%;
+    left: 10%;
+    border-radius: 50%;
+}
+
+.circle{
+    background-color: gray;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.btn{
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    font-size: 25px;
+}
+
+.images{
+    height: 100%;
+    width: 100%;
+}
+
+#menu{
+    top: 3%;
+    left: 40%;
+}
+
+#back{
+    top: 20%;
+    left: 2%;
+}
+
+#next{
+    top: 20%;
+    left: 80%;
+}
+
+#play{
+    top: 80%;
+    left: 40%;
+}
