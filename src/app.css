@@ -47,27 +47,37 @@
     width: 180px;
     background-color: transparent;
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     position: absolute;
     border: none;
     cursor: pointer;
-    padding: 0px;
     font-weight: bold;
+    text-align: left;
+}
+
+#card{
+    top: 35%;
+    left: 3%;
 }
 
 #music{
-    top: 40%;
+    top: 50%;
     left: 3%;
 }
 
 #games{
-    top: 60%;
+    top: 65%;
     left: 3%;
 }
 
 #settings{
     left: 3%;
     top: 80%;
+}
+
+.active-option{
+    background-color: lightskyblue;
+    color: white;
 }
 
 .options{
@@ -81,7 +91,6 @@
 }
 
 .circle{
-    background-color: gray;
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -90,12 +99,21 @@
     left: 30%;
 }
 
+#center-btn{
+    background-color: gray;
+    top: 0%;
+    left: 0%;
+    border: none;
+}
+
 .btn{
     background-color: transparent;
     height: 50px;
     width: 50px;
     position: relative;
-    font-size: 25px;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
 }
 
 .images{
@@ -104,21 +122,46 @@
 }
 
 #menu{
-    top: 3%;
-    left: 40%;
+    top: 2%;
+    left: 35%;
+    font-weight: bold;
 }
 
 #back{
-    top: 20%;
-    left: 2%;
+    top: 42%;
+    left: -16%;
 }
 
 #next{
-    top: 20%;
-    left: 80%;
+    top: 42%;
+    left: 35%;
 }
 
 #play{
-    top: 80%;
-    left: 40%;
+    top: 75%;
+    left: -16%;
+    font-size: 20px;
+}
+
+
+
+
+
+.components{
+    background-color: white;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    border-radius: 1.2rem;
+    position: relative;
+    top: 3%;
+    left: 7%;
+}
+
+.component-span{
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 40%;
+    left: 28%;
 }
