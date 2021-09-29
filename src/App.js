@@ -67,35 +67,35 @@ class App extends React.Component {
         });
       }
 
-      // if (distance > -90 && distance < 0) {
-      //   options.setState({
-      //     isCardFlow: false,
-      //     isSetting: true,
-      //     isGame: false,
-      //     isMusic: false
-      //   });
-      // } else if (distance > -180 && distance < -90) {
-      //   options.setState({
-      //     isGame: true,
-      //     isSetting: false,
-      //     isMusic: false,
-      //     isCardFlow: false,
-      //   });
-      // } else if (distance > -270 && distance < -180) {
-      //   options.setState({
-      //     isSetting: false,
-      //     iCardFlow: false,
-      //     isMusic: true,
-      //     isGame: false
-      //   });
-      // } else if (distance > -360 && distance < -270) {
-      //   options.setState({
-      //     isSetting: false,
-      //     isCardFlow: true,
-      //     isMusic: false,
-      //     isGame: false
-        // });
-      // }
+      if (distance > -90 && distance < 0) {
+        options.setState({
+          isCardFlow: false,
+          isSetting: true,
+          isGame: false,
+          isMusic: false
+        });
+      } else if (distance > -180 && distance < -90) {
+        options.setState({
+          isGame: true,
+          isSetting: false,
+          isMusic: false,
+          isCardFlow: false,
+        });
+      } else if (distance > -270 && distance < -180) {
+        options.setState({
+          isSetting: false,
+          iCardFlow: false,
+          isMusic: true,
+          isGame: false
+        });
+      } else if (distance > -360 && distance < -270) {
+        options.setState({
+          isSetting: false,
+          isCardFlow: true,
+          isMusic: false,
+          isGame: false
+        });
+      }
     });
     console.log("round");
   };

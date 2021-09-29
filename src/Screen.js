@@ -13,16 +13,20 @@ const Screen = (props) => {
         props.handleZesture(e);
         props.SelectOption();
     }
+    console.log('props.isCardFlow', props.isCardFlow);
+    console.log('props.isMusic', props.isMusic);
+    console.log('props.isSetting', props.isSetting);
+    console.log('props.isGame', props.isGame);
     return (
         <div className="outer">
             <div className="screen"> 
                 <img className="images" id="background" src="https://wallpaper.dog/large/10928464.jpg" />
                 <div className="screen-options">
                     <span className="ipod">iPod</span>
-                    <button className={`screen-btn ${props.isCardFlow} ? 'active-option' : '' `} id="card">CardFlow</button>
-                    <button className={`screen-btn ${props.isMusic} ? 'active-option' : '' `} id="music">Music</button>
-                    <button className={`screen-btn ${props.isGame} ? 'active-option' : '' `} id="games">Games</button>
-                    <button className={`screen-btn ${props.isSetting} ? 'active-option' : '' `} id="settings">Settings</button>
+                    <button id="card" className={`screen-btn ${props.isCardFlow ? 'active-option' : '' }`} >CardFlow</button>
+                    <button id="music" className={`screen-btn ${props.isMusic ? 'active-option' : '' }`} >Music</button>
+                    <button id="games" className={`screen-btn ${props.isGame ? 'active-option' : '' }`} >Games</button>
+                    <button id="settings" className={`screen-btn ${props.isSetting ? 'active-option' : '' }`}>Settings</button>
                 </div>
                 <Options 
                     handleZesture = {props.handleZesture}
