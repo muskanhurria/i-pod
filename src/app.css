@@ -55,22 +55,22 @@
     text-align: left;
 }
 
-#card{
+.option1{
     top: 35%;
     left: 3%;
 }
 
-#music{
+.option2{
     top: 50%;
     left: 3%;
 }
 
-#games{
+.option3{
     top: 65%;
     left: 3%;
 }
 
-#settings{
+.option4{
     left: 3%;
     top: 80%;
 }
@@ -113,7 +113,6 @@
     position: relative;
     font-size: 28px;
     border: none;
-    cursor: pointer;
 }
 
 .images{

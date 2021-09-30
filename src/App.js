@@ -4,7 +4,6 @@ import Settings from "./Settings";
 import Music from "./Music";
 import Games from "./Games";
 import CardFlow from "./CardFlow";
-import Options from "./Options";
 import ZingTouch from "zingtouch";
 
 class App extends React.Component {
@@ -138,7 +137,6 @@ class App extends React.Component {
         /> 
         )
       }
-        
     </div>
     );
   }
