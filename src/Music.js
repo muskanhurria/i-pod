@@ -6,11 +6,11 @@ import Playlist from "./Playlist";
 import Favourite from "./Favourite";
 import Album from "./Album";
 import Artist from "./Artist";
-import App from "./App";
 
 class Music extends React.Component {
   constructor(){
     super();
+    //state created to check what has to be displayed on screen
     this.state = {
       isAlbum: false,
       isArtist: false,
@@ -21,7 +21,7 @@ class Music extends React.Component {
   }
 
   
-
+  //to create a rotating cursor action 
   handleZesture = (e) => {
     const options = this;
     var distance = 0;
@@ -32,14 +32,14 @@ class Music extends React.Component {
       console.log("rotate details", e.detail.distanceFromOrigin);
       distance = e.detail.distanceFromOrigin;
 
+      //to change the option selected with the rotating cursor- clockwise
       if (distance > 0 && distance < 90) {
         console.log('inside if');
         options.setState({
           isAlbum: true,
           isFavourite: false,
           isArtist: false,
-          isPlaylist: false,
-          isAddMusic: false
+          isPlaylist: false
         });
       }
 
@@ -71,6 +71,7 @@ class Music extends React.Component {
         });
       }
 
+      //rotation in anticlockwise direction
       if (distance > -90 && distance < 0) {
         options.setState({
           isAlbum: false,
@@ -101,27 +102,24 @@ class Music extends React.Component {
         });
       }
     });
-    console.log("round");
   };
 
+  //center button click handle
   SelectOption = () => {
     this.setState({isMusicComponent: true});
   }
 
+  //menu button click
   handleMenuClick = () => {
     this.setState({isMusicComponent: false});
-    // this.setState({isAddMusic: true});
-  }
-
-  handleMainMenuClick = () => {
-    // this.state({isAddMusic : false});
   }
 
   render(){
     const { handleMenuClick } = this.props;
-    const { isAlbum, isArtist, isPlaylist, isFavourite, isMusicComponent,isAddMusic } = this.state;
+    const { isAlbum, isArtist, isPlaylist, isFavourite, isMusicComponent } = this.state;
     return (
       <div className="out">
+        {/* checking boolean variables to display components on screen */}
       {
         isMusicComponent ?(
         isPlaylist ? (
@@ -133,7 +131,7 @@ class Music extends React.Component {
         ): (
           <Album handleMenuClick = {this.handleMenuClick}/>
         )
-        ): //isAddMusic ? (
+        ): 
         <AddMusic 
           handleZesture = {this.handleZesture}
           handleMenuClick = { handleMenuClick }
@@ -144,7 +142,6 @@ class Music extends React.Component {
           isPlaylist = {isPlaylist}
           isMusicComponent = {isMusicComponent}
         />
-        // ) : ( <App />)
       }
       </div>
     );

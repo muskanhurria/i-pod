@@ -4,20 +4,14 @@ import Options from "./Options";
 
 
 const Screen = (props) => {
-    // console.log('isCardFlow: ',props.isCardFlow);
-    // console.log('isMusic: ',props.isMusic);
-    // console.log('isGame: ',props.isGame);
-    // console.log('isSetting: ',props.isSetting);
-
+    //for using the handleZesture function
     const handleClick = (e) =>{
         props.handleZesture(e);
         props.SelectOption();
     }
-    // console.log('props.isCardFlow', props.isCardFlow);
-    // console.log('props.isMusic', props.isMusic);
-    // console.log('props.isSetting', props.isSetting);
-    // console.log('props.isGame', props.isGame);
+
     return (
+        //layout of screen created 
         <div className="outer">
             <div className="screen"> 
                 <img className="images" id="background" src="https://wallpaper.dog/large/10928464.jpg" alt="wallpaper" />
@@ -28,6 +22,8 @@ const Screen = (props) => {
                     <button className={`screen-btn option3 ${props.isGame ? 'active-option' : '' }`} >Games</button>
                     <button className={`screen-btn option4 ${props.isSetting ? 'active-option' : '' }`}>Settings</button>
                 </div>
+                
+                {/* the wheel of control with menu button */}
                 <Options 
                     handleZesture = {props.handleZesture}
                     handleMenuClick = {props.handleMenuClick}

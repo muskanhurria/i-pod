@@ -3,6 +3,7 @@ import './app.css';
 
 
 const Options = (props) => {
+  //wheel of control created by calling different functions as props
   return (
     <div className="options" onClick={props.handleZesture}>
         <button className="btn" id="menu" onClick={props.handleMenuClick}>Menu</button>

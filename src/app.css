@@ -1,3 +1,4 @@
+/* ----main screen (Screen.js)---- */
 .outer{
     background-color: lightgray;
     height: 600px;
@@ -80,6 +81,7 @@
     color: white !important;
 }
 
+/* ----for wheel of control buttons (Options.js)---- */
 .options{
     background-color: white;
     height: 250px;
@@ -144,7 +146,7 @@
 
 
 
-
+/* ----for various screen components like playlist, cardflow etc---- */
 .components{
     background-color: white;
     border: 2px solid black;
@@ -161,5 +163,11 @@
     font-size: 30px;
     position: absolute;
     top: 40%;
-    left: 28%;
+    left: 20%;
+}
+
+.component-image{
+    height: 50px;
+    width: 50px;
+    position: absolute;
 }

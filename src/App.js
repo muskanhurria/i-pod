@@ -9,6 +9,7 @@ import ZingTouch from "zingtouch";
 class App extends React.Component {
   constructor(){
     super();
+    //state created to check what has to be displayed on screen
     this.state = {
       isCardFlow: false,
       isMusic: false,
@@ -18,6 +19,7 @@ class App extends React.Component {
     }
   }
 
+  //to create a rotating cursor action
   handleZesture = (e) => {
     const options = this;
     var distance = 0;
@@ -28,6 +30,7 @@ class App extends React.Component {
       console.log("rotate details", e.detail.distanceFromOrigin);
       distance = e.detail.distanceFromOrigin;
 
+      //to change the option selected with the rotating cursor- clockwise
       if (distance > 0 && distance < 90) {
         console.log('inside if');
         options.setState({
@@ -66,6 +69,7 @@ class App extends React.Component {
         });
       }
 
+      //rotation in anticlockwise direction
       if (distance > -90 && distance < 0) {
         options.setState({
           isCardFlow: false,
@@ -96,13 +100,14 @@ class App extends React.Component {
         });
       }
     });
-    console.log("round");
   };
 
+  //center button click handle
   SelectOption = () => {
     this.setState({isComponent: true});
   }
 
+  //menu button click
   handleMenuClick = () => {
     this.setState({isComponent: false});
     console.log("handleMenuClick");
@@ -113,6 +118,7 @@ class App extends React.Component {
     console.log('iscomponent: ', isComponent);
     return (
       <div className="App">
+        {/* checking boolean variables to display components on screen */}
       {
         isComponent ?(
           isSetting ? (
